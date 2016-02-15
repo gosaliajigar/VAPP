@@ -1,0 +1,195 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#FFFFFF"
+    tools:context="com.rpg.brg.activity.sendmoney.SendMoneyActivity" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            
+		    <EditText
+		        android:id="@+id/commandTextView"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:inputType="text"
+		        android:hint="@string/tap_mic"
+		        android:textColorHint="#575057"
+		        android:background="#DCDCDC"
+		        android:textStyle="italic"
+				android:focusable="false"
+		        android:gravity="bottom|left"
+		        android:layout_marginTop="10dp" />
+		    
+		    <EditText
+		        android:id="@+id/enterCommandEditText"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/commandTextView"
+		        android:layout_marginTop="10dp"
+		        android:layout_centerHorizontal="true"
+		        android:hint="@string/enter_command"
+		        android:textColorHint="#575057"
+		        android:inputType="text" />
+		
+		    <Button
+		        android:id="@+id/commandButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/enterCommandEditText"
+		        android:layout_marginTop="10dp"
+		        android:text="@string/command"
+		        android:layout_centerHorizontal="true" />
+
+		    <EditText
+		        android:id="@+id/emailPhoneEditText"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/commandButton"
+		        android:hint="@string/to_email_phone_number"
+		        android:inputType="text|phone|textEmailAddress"
+                android:gravity="bottom|center"
+                android:textColorHint="#575057"
+                android:textStyle="italic"
+		        android:focusable="false"
+		        android:layout_marginTop="10dp" />
+		
+		    <LinearLayout 
+				android:layout_height="wrap_content"  
+				android:layout_width="fill_parent" 
+				android:gravity="center_horizontal"
+		        android:layout_below="@id/emailPhoneEditText"
+				android:layout_marginTop="40dp"
+				android:weightSum="1.0">
+		
+			    <EditText
+			        android:id="@+id/amountEditText"
+					android:layout_height="wrap_content"  
+					android:layout_width="fill_parent" 
+	                android:layout_weight="0.5"
+			        android:inputType="number|numberDecimal"
+			        android:hint="@string/amount"
+	                android:focusable="false"
+	                android:gravity="bottom|center"
+	                android:textColorHint="#575057"
+	                android:textStyle="italic" />
+
+			    <EditText
+			        android:id="@+id/currencyEditText"
+					android:layout_height="wrap_content"  
+					android:layout_width="fill_parent" 
+	                android:layout_weight="0.5"
+	                android:layout_marginLeft="4dp"
+	                android:text="@string/currency"
+	                android:inputType="text"
+	                android:focusable="false"
+	                android:gravity="bottom|center"
+	                android:textColorHint="#575057"
+	                android:textStyle="italic" />
+
+		    </LinearLayout>
+			
+		    <EditText
+		        android:id="@+id/messageEditText"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/emailPhoneEditText"
+		        android:hint="@string/message_optional"
+		        android:focusable="false"
+		        android:inputType="text"
+                android:gravity="bottom|center"
+                android:textColorHint="#575057"
+                android:textStyle="italic"
+		        android:layout_marginTop="100dp" />
+
+		    <TextView
+		        android:id="@+id/whatForTextView"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/messageEditText"
+		        android:text="@string/payment_for"
+		        android:focusable="false"
+                android:gravity="bottom|left"
+                android:textStyle="italic"
+		        android:layout_marginTop="40dp" />
+
+		    <View
+                android:id="@+id/line"
+    			android:layout_width="fill_parent"
+    			android:layout_height="1dp"
+				android:layout_below="@id/whatForTextView"
+                android:layout_marginTop="10dp"
+    			android:background="@android:color/darker_gray"/>
+
+		    <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+				android:layout_below="@+id/line"
+                android:layout_alignParentLeft="true"
+				android:layout_marginTop="10dp"
+                android:orientation="vertical" >
+	            <RadioButton
+	                android:id="@+id/radioFamilyFriends"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:background="#FFFFFF"
+	                android:text="@string/family_or_friends"
+	                android:textColor="#000000"
+	                android:textStyle="italic" />
+	            <RadioButton
+	                android:id="@+id/radioGoodsServices"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:background="#FFFFFF"
+	                android:text="@string/goods_or_services"
+	                android:textColor="#000000"
+	                android:textStyle="italic" />
+            </RadioGroup>
+
+		    <TextView
+		        android:id="@+id/feesTextView"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/radioGroup"
+		        android:text=""
+		        android:focusable="false"
+                android:gravity="bottom|left"
+                android:textColorHint="#575057"
+                android:textStyle="italic"
+		        android:layout_marginTop="20dp" />
+
+		    <ImageButton
+		        android:id="@+id/button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/feesTextView"
+		        android:layout_marginTop="40dp"
+		        android:layout_alignParentBottom="true"
+		        android:layout_centerHorizontal="true"
+		        android:clickable="true"
+		        android:scaleType="fitCenter"
+		        android:adjustViewBounds="true"
+		        android:padding="0dp"
+		        android:cropToPadding="true"
+		        android:contentDescription="@string/microphone_button"
+		        android:background="@drawable/ic_microphone" />
+
+        </RelativeLayout>
+
+	</ScrollView>
+
+</RelativeLayout>

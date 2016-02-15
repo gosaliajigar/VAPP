@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#FFFFFF"
+    tools:context="com.example.saytopay.MainActivity" >
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+		    <EditText
+		        android:id="@+id/commandTextView"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_alignParentLeft="true"
+		        android:inputType="text"
+				android:focusable="false"
+				android:hint="@string/tap_mic"
+				android:textColorHint="#575057"
+				android:textStyle="italic"
+				android:background="#DCDCDC"
+		        android:gravity="bottom|left"
+		        android:layout_marginTop="10dp" />
+		    
+		    <EditText
+		        android:id="@+id/enterCommandEditText"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/commandTextView"
+		        android:layout_marginTop="10dp"
+		        android:layout_centerHorizontal="true"
+		        android:hint="@string/enter_command"
+		        android:textColorHint="#575057"
+		        android:inputType="text" />
+		
+		    <Button
+		        android:id="@+id/commandButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/enterCommandEditText"
+		        android:layout_marginTop="10dp"
+		        android:text="@string/command"
+		        android:layout_centerHorizontal="true" />
+
+			<Button
+		        android:id="@+id/sendMoneyButton"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/commandButton"
+		        android:layout_marginTop="20dp"
+		        android:text="@string/send_money"
+		        android:enabled="true"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="#FFFFFF"
+		        android:background="#1E90FF" />
+
+			<Button
+		        android:id="@+id/requestMoneyButton"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/sendMoneyButton"
+		        android:layout_marginTop="20dp"
+		        android:text="@string/request_money"
+		        android:enabled="true"
+		        android:textAppearance="?android:attr/textAppearanceMedium"
+		        android:textColor="#FFFFFF"
+		        android:background="#1E90FF" />
+
+		    <ImageButton
+		        android:id="@+id/button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_below="@id/requestMoneyButton"
+		        android:layout_marginTop="40dp"
+		        android:layout_alignParentBottom="true"
+		        android:layout_centerHorizontal="true"
+		        android:clickable="true"
+		        android:scaleType="fitCenter"
+		        android:adjustViewBounds="true"
+		        android:padding="0dp"
+		        android:cropToPadding="true"
+		        android:contentDescription="@string/microphone_button"
+		        android:background="@drawable/ic_microphone" />
+
+        </RelativeLayout>
+
+	</ScrollView>
+
+</RelativeLayout>

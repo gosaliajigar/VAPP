@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">VAPP</string>
+
+    <string name="action_activate">Activate</string>
+    <string name="action_debug">Debug</string>
+
+    <string name="title_activity_login">VAPP</string>
+    <string name="title_activity_send_money">Send Money</string>
+    <string name="title_activity_request_money">Request Money</string>
+    <string name="title_activity_confirm">Confirmation</string>
+    <string name="title_activity_review">Review Transaction</string>
+    <string name="title_activity_recent">Recent Activity</string>
+
+    <string name="email_address">Email address</string>
+    <string name="password">Password</string>
+    <string name="log_in">Log In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="send_money">Send Money</string>
+    <string name="request_money">Request Money</string>
+
+    <string name="to_email_phone_number">To: Email or Phone Number</string>
+    <string name="from_email_phone_number">From: Email or Phone Number</string>
+    <string name="message_optional">Message (Optional)</string>
+    <string name="currency">USD-US Dollars</string>
+    <string name="payment_for">WHAT\'S THE PAYMENT FOR</string>
+    <string name="family_or_friends">Family or Friends</string>
+    <string name="goods_or_services">Goods or Services</string>
+
+    <string name="payment_method">PAYMENT METHOD</string>
+    <string name="speak_options">Speak Options</string>
+    <string name="you_are_sending">You\'re Sending:</string>
+    <string name="amount">Amount</string>
+    <string name="fees">Fees</string>
+    <string name="total">Total</string>
+
+    <string name="existing_activity_page">Existing Activity Page</string>
+    <string name="enter_command">Enter Command</string>
+    <string name="tap_mic">Tap mic and speak &#8230; </string>
+    <string name="command">Command</string>
+    <string name="add">Add</string>
+    <string name="retrieve">Retrieve</string>
+    <string name="microphone_button">microphone</string>
+    <string name="tick_button">tick</string>
+    <string name="location_button">location</string>
+
+</resources>
